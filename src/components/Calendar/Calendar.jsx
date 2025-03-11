@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { workingHours } from "@data/workingHours.js"
+import { workingHours } from "@dataUtils/workingHours.js"
 
 export function Calendar() {
     const [days, setDays] = useState([])
