@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import { useLocation, useNavigate } from "react-router-dom"
 import { useForm } from "react-hook-form"
 import _ from 'lodash'
@@ -8,17 +9,15 @@ export function Reserve() {
     const { spaceId, spaceName, day, hour } = receptor.state || {}
     let reservations = JSON.parse(localStorage.getItem(spaceId)) || []
     const { formState: { errors }, register, handleSubmit } = useForm()
-    validateData()
+
+    useEffect(() => {
+        validateData()
+    }, [])
+
 
     function validateData() {
-        if (!spaceId || !day || !hour) {
+        if (!spaceId || !spaceName || !day || !hour) {
             navigate("/spaces")
-        }
-        let isReserved = reservations.some(
-            reservation => reservation.day === day && reservation.hour === hour
-        )
-        if (isReserved) {
-            navigate(`/booking/${spaceId}`)
         }
     }
 
