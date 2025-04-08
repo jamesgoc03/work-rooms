@@ -34,8 +34,8 @@ export function Menu() {
               <li>
                 <Link
                   className="btn btn-outline"
-                  to="/dashboard">
-                  Dashboard
+                  to="/spaces">
+                  spaces
                 </Link>
               </li>
               <li>
@@ -50,7 +50,7 @@ export function Menu() {
           <Link
             className="text-lg font-extrabold text-nowrap"
             to="/">
-            Hotel Gestor
+            Work Rooms
           </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -65,8 +65,8 @@ export function Menu() {
             <li>
               <Link
                 className="btn btn-outline mx-2"
-                to="/dashboard">
-                Dashboard
+                to="/spaces">
+                Spaces
               </Link>
             </li>
             <li>
