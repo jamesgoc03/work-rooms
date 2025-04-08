@@ -11,12 +11,12 @@ export function About() {
             <div className="px-10 justify-center items-center max-w-lg min-w-xs flex flex-col gap-4">
                 <h3 className="text-4xl font-extrabold">About Us</h3>
                 <p className="text-2xl text-center font-light">
-                    Located in the heart of the city, Hotel Estrella Mar offers a perfect blend of modern luxury and warm hospitality. With elegant rooms and exceptional service, every stay promises comfort and sophistication.
+                    We are a company dedicated to providing the best spaces for work, study, and meetings. Our mission is to create comfortable and functional environments that meet the needs of our clients.
                 </p>
                 <Link 
                     className="btn btn-outline btn-wide btn-accent mt-6"
-                    to="/booking">
-                    Book now
+                    to="/spaces">
+                    Booking now
                 </Link>
             </div>
 

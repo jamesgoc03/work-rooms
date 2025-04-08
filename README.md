@@ -1,46 +1,45 @@
-# Hotel Gestor App
+# Work Rooms Gestor App
 
-## Descripción
-Hotel Gestor App es una aplicación desarrollada en React que permite la gestión de reservas de hoteles, proporcionando un sistema de booking, un dashboard administrativo y una página de inicio (landing page) para los usuarios.
+## Description
+Work Rooms Gestor App is an application developed in React that allows the management of workspace reservations, providing a booking system, a page with available spaces, and a landing page for users.
 
-## Características
-- **Landing Page:** Presentación del servicio con información relevante para los usuarios.
-- **Sistema de Reservas (Booking):** Permite a los usuarios realizar y gestionar reservas en los hoteles disponibles.
-- **Dashboard:** Interfaz administrativa para la gestión de reservas, clientes y configuraciones del sistema.
+## Features
+- **Landing Page:** Service presentation with relevant information for users.
+- **Booking System:** Allows users to make and manage reservations in the available spaces.
+- **Spaces:** Interface to display the available spaces for reservation.
 
-## Requisitos
-Antes de ejecutar la aplicación, asegúrate de tener instalado:
-- [Node.js](https://nodejs.org/) (versión recomendada: 16 o superior)
-- [npm](https://www.npmjs.com/) (se instala con Node.js)
+## Requirements
+Before running the application, make sure you have installed:
+- [Node.js](https://nodejs.org/) (recommended version: 16 or higher)
+- [npm](https://www.npmjs.com/) (comes with Node.js)
 
-## Instalación
-1. Clonar el repositorio:
+## Installation
+1. Clone the repository:
    ```sh
-   git clone https://github.com/jamesgoc03/Gestor-Application.git
-   cd hotel-gestor-app
+   git clone https://github.com/jamesgoc03/work-rooms.git
+   cd work-rooms
    ```
-2. Instalar dependencias:
+2. Install dependencies:
    ```sh
    npm install
    ```
 
-## Ejecución
-Para iniciar la aplicación en modo de desarrollo, ejecuta:
+## Execution
+To start the application in development mode, run:
 ```sh
 npm run dev
 ```
-Esto iniciará el servidor de desarrollo y la aplicación estará disponible en `http://localhost:5173/` (o el puerto asignado por Vite).
+This will start the development server, and the application will be available at `http://localhost:5173/` (or the port assigned by Vite).
 
-## Construcción para Producción
-Para generar una versión optimizada para producción:
+## Build for Production
+To generate an optimized production build:
 ```sh
 npm run build
 ```
-Esto generó los archivos en la carpeta `dist/`.
+This will generate the files in the `dist/` folder.
 
-## Tecnologías Utilizadas
+## Technologies Used
 - React
 - Vite
-- React Router (para la navegación)
-- Tailwind CSS (para estilos)
-- Context API / Redux (para gestión de estado, según implementación)
+- React Router (for navigation)
+- Tailwind CSS (for styling)
