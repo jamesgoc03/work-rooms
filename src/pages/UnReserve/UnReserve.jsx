@@ -1,3 +1,4 @@
+import { useEffect } from "react"
 import { useLocation, useNavigate } from "react-router-dom"
 import { useForm } from "react-hook-form"
 import _ from 'lodash'
@@ -9,10 +10,13 @@ export function UnReserve() {
     let reservations = JSON.parse(localStorage.getItem(spaceId)) || []
     let originalEmail = reservations.find(reservation => reservation.day === day && reservation.hour === hour)?.email
     const { formState: { errors }, register, handleSubmit } = useForm()
-    validateData()
+
+    useEffect(() => {
+        validateData()
+    }, [])
 
     function validateData() {
-        if (!spaceId || !day || !hour) {
+        if (!spaceId || !spaceName || !day || !hour) {
             navigate("/spaces")
         }
     }
@@ -33,10 +37,13 @@ export function UnReserve() {
     }
 
     function anonymizeEmail() {
-        const [username, domain] = originalEmail.split('@');
-        const anonymizedUsername = username.charAt(0) + '*'.repeat(username.length - 2) + username.charAt(username.length - 1);
-        return anonymizedUsername + "@" + domain;
-    } 
+        if (originalEmail) {
+            const [username, domain] = originalEmail.split('@');
+            const anonymizedUsername = username.charAt(0) + '*'.repeat(username.length - 2) + username.charAt(username.length - 1);
+            return anonymizedUsername + "@" + domain;
+        }
+
+    }
 
     return (
         <div className="flex items-center justify-center h-screen bg-base-300 flex-col gap-3">
